@@ -6,13 +6,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { TeamCardComponent } from './components/team-card/team-card.component';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ElementTypePipe } from './components/team-card/pipes/element-type.pipe';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     TeamCardComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    ElementTypePipe
   ],
   imports: [
     CommonModule,

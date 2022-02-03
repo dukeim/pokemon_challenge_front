@@ -10,9 +10,9 @@
         <div class="col-sm-4">
             <div class="card mb-2 border-0">
                 <img [src]="pokemon.sprites.other.home.front_default" class="card-img-top">
-                <div class="card-body pt-1 px-2">
-                    <h5 class="card-title mb-1">{{pokemon.name | titlecase}}</h5>
-                    <p class="card-text">Prueba</p>
+                <div class="card-body pt-1 px-2 ">
+                    <h5 class="card-title mb-1 text-center">{{pokemon.name | titlecase}}</h5>
+                    <p class="card-text text-center font-italic">{{pokemon.types | elementType}}</p>
                 </div>
             </div>  
         </div>
