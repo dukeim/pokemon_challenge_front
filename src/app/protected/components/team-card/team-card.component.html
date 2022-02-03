@@ -1,0 +1,30 @@
+<div class="text-center p-2"  *ngIf="loading">
+        <div class="spinner-border" role="status">
+       </div>
+</div>
+<div class="d-md-flex justify-content-md-end my-3" *ngIf="!loading">
+    <button type="button" class="btn btn-primary">Edit Team</button>
+</div>
+<div *ngIf="!loading">
+    <div class="row shadow border rounded mb-3" *ngFor="let pokemon of pokemons; let i = index">
+        <div class="col-sm-4">
+            <div class="card mb-2 border-0">
+                <img [src]="pokemon.sprites.other.home.front_default" class="card-img-top">
+                <div class="card-body pt-1 px-2">
+                    <h5 class="card-title mb-1">{{pokemon.name | titlecase}}</h5>
+                    <p class="card-text">Prueba</p>
+                </div>
+            </div>  
+        </div>
+        <div class="col-sm-8 mt-3">
+            <div class="col-12 px-0" *ngFor="let stat of pokemon.stats">
+                <div class="col-12 col-sm-5 d-inline-block px-0">
+                    {{stat.stat.name | titlecase}}
+                </div>
+                <div class="col-12 col-sm-7 d-inline-block px-0">
+                    <p><ngb-progressbar [type]="i==1?'info':i==2?'success':'warning'" [value]="stat.base_stat"></ngb-progressbar></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

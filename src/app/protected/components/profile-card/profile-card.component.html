@@ -1,0 +1,60 @@
+<div class="text-center p-2"  *ngIf="loading">
+    <div class="spinner-border" role="status">
+   </div>
+</div>
+
+<div class="d-md-flex justify-content-md-start my-3" *ngIf="!loading">
+    <button type="button" class="btn btn-primary">Edit Profile</button>
+</div>
+<div class="container border rounded shadow bg-warning" *ngIf="!loading">
+    <div class="row mt-2">
+        <div class="col-12">
+            <span class="badge badge-success float-start float-md-end">Trainer</span>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+            <div class="col-md-3 px-0 mb-3">
+                <img src="../../../../assets/images/blank-profile.png" 
+                class="img-thumbnail rounded-circle mt-3">
+            </div>
+    </div>
+
+    <div class="col-12 justify-content-center">
+        <div class="row">
+        <div class="col-12 col-md-6">
+            <label class="form-label d-flex justify-content-start justify-content-md-end font-weight-bold">Name:</label>
+        </div>
+        <div class="col-12 col-md-6">
+            <label class="form-label">{{profile!.name}}</label>
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+            <label class="form-label  d-flex justify-content-start justify-content-md-end font-weight-bold">Hobby:</label>
+            </div>
+            <div class="col-12 col-md-6">
+            <label class="form-label">{{profile!.hobby}}</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+            <label class="form-label d-flex justify-content-start justify-content-md-end font-weight-bold">Age:</label>
+            </div>
+            <div class="col-12 col-md-6">
+            <label class="form-label">{{profile!.age}}</label>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-12 col-md-6">
+            <label class="form-label  d-flex justify-content-start justify-content-md-end font-weight-bold">{{profile!.docType}}:</label>
+            </div>
+            <div class="col-12 col-md-6">
+            <label class="form-label">{{profile!.docNumber}}</label>
+            </div>
+        </div>
+    </div>
+
+</div>
